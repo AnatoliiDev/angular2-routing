@@ -1,0 +1,8 @@
+li:hover {
+    background-color: dodgerblue;
+    cursor: pointer;
+}
+
+.selected {
+    background-color: cadetblue;
+}

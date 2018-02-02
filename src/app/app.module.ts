@@ -8,6 +8,9 @@ import { RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { ProductsComponent } from './products/products.component';
 import { AdminComponent } from './admin/admin.component';
+import { routes } from './app.routes';
+import { ProdListService } from './shared/prodList.service';
+import { ProductsDetailsComponent } from './products-details/products-details.component';
 
 
 @NgModule({
@@ -15,18 +18,14 @@ import { AdminComponent } from './admin/admin.component';
     AppComponent,
     HomeComponent,
     ProductsComponent,
+    ProductsDetailsComponent,
     AdminComponent
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot([
-      { path: "", redirectTo: "home", pathMatch: "full" },
-      { path: "home", component: HomeComponent },
-      { path: "products", component: ProductsComponent },
-      { path: "admin", component: AdminComponent }
-    ])
+    RouterModule.forRoot(routes)
   ],
-  providers: [],
+  providers: [ProdListService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

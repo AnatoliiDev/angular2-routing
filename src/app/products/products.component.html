@@ -1,1 +1,6 @@
 <h2>Products</h2>
+<ul *ngFor="let product of products"
+    (click)="onSelect(product)"
+    [class.selected]="isSelected(product)">
+        <li>Name: {{product.name}}</li>    
+</ul>
