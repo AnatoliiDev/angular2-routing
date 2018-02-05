@@ -1,6 +1,6 @@
 import { Component } from "@angular/core";
-import { ProdListService } from "../shared/prodList.service";
-import { Product } from "../shared/product";
+import { ProdListService } from "../../shared/prodList.service";
+import { Product } from "../../shared/product";
 import { Router, Params, ActivatedRoute } from "@angular/router";
 
 
@@ -27,7 +27,7 @@ export class ProductsComponent {
     }
 
     onSelect(product) {
-        this.router.navigate(["product", product.id])
+        this.router.navigate(["products", product.id])
     }
 
     isSelected(product) {

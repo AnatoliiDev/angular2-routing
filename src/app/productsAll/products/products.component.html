@@ -2,5 +2,7 @@
 <ul *ngFor="let product of products"
     (click)="onSelect(product)"
     [class.selected]="isSelected(product)">
-        <li>Name: {{product.name}}</li>    
+        <li><b>Name:</b> {{product.name}}</li>    
 </ul>
+<hr />
+<router-outlet></router-outlet>
